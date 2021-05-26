@@ -64,7 +64,7 @@ static	void		next(char **line, unsigned int *len,
 	}
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**arr;
 	char			*line;

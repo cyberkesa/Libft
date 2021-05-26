@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vwinfred <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 17:13:08 by vwinfred          #+#    #+#             */
-/*   Updated: 2020/11/01 17:13:09 by vwinfred         ###   ########.fr       */
+/*   Created: 2021/04/07 18:55:22 by vwinfred          #+#    #+#             */
+/*   Updated: 2021/04/07 18:55:23 by vwinfred         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	const char		*s;
-	const char		*lasts;
-	char			*d;
-	char			*lastd;
-
-	d = dst;
-	s = src;
-	lasts = s + (len - 1);
-	lastd = d + (len - 1);
-	if (dst != 0 || src != 0)
-		while (len--)
-		{
-			if (d < s)
-				*d++ = *s++;
-			else
-				*lastd-- = *lasts--;
-		}
-	return (dst);
+	if (new == NULL)
+		return;
+	new->next = *lst;
+	*lst = new;
 }

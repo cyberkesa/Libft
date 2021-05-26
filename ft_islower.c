@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vwinfred <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 17:13:08 by vwinfred          #+#    #+#             */
-/*   Updated: 2020/11/01 17:13:09 by vwinfred         ###   ########.fr       */
+/*   Created: 2021/04/07 17:54:44 by vwinfred          #+#    #+#             */
+/*   Updated: 2021/04/07 17:54:46 by vwinfred         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_islower(int c)
 {
-	const char		*s;
-	const char		*lasts;
-	char			*d;
-	char			*lastd;
-
-	d = dst;
-	s = src;
-	lasts = s + (len - 1);
-	lastd = d + (len - 1);
-	if (dst != 0 || src != 0)
-		while (len--)
-		{
-			if (d < s)
-				*d++ = *s++;
-			else
-				*lastd-- = *lasts--;
-		}
-	return (dst);
+	return (c >= 97 && c <= 122);
 }

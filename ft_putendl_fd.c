@@ -14,10 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char	end;
-	size_t	i;
+	size_t			i;
 
-	end = '\n';
 	if (s != NULL)
 	{
 		i = 0;
@@ -27,5 +25,5 @@ void	ft_putendl_fd(char *s, int fd)
 			i++;
 		}
 	}
-	write(fd, &end, 1);
+	write(fd, "\n", 1);
 }

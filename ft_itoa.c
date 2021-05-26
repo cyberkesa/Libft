@@ -34,7 +34,7 @@ static	int	len(long l)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*array;
 	long	l;
